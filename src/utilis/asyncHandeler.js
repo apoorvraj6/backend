@@ -1,4 +1,4 @@
-const asyncHandeler = (requsetHandeler)=>{
+const asyncHandler = (requsetHandeler)=>{
     return (req,res,next)=>{
         Promise.resolve(requsetHandeler(req,res,next)).
         catch((err)=>next(err))
@@ -8,7 +8,7 @@ const asyncHandeler = (requsetHandeler)=>{
 }
 
 
-export { asyncHandeler }
+export { asyncHandler }
 
 
 
